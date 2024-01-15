@@ -28,6 +28,7 @@ export const DropDownMenu = ({ menuOpen, handleCloseMenu }: IDropDownProps) => {
             document.removeEventListener('click', onClick)
         }
     }, [handleCloseMenu])
+
     useEffect(() => {
         if (menuOpen) {
             document.body.style.overflow = 'hidden'
@@ -36,6 +37,7 @@ export const DropDownMenu = ({ menuOpen, handleCloseMenu }: IDropDownProps) => {
 
         }
     }, [menuOpen])
+
     return (
         <div className={cx([styles.wrapper, menuOpen ? `dropdown_active` : 'dropdown_notactive'])}>
             <div className={cx([`dropdown_menu`])} ref={rootElement}>
@@ -51,6 +53,5 @@ export const DropDownMenu = ({ menuOpen, handleCloseMenu }: IDropDownProps) => {
             </div>
             <div className={cx([styles.overlay])} />
         </div>
-
     )
 }

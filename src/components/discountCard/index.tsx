@@ -11,8 +11,6 @@ interface IDiscountCard {
     placeholder: string
 }
 const DiscountCard = ({ image, name, description, placeholder }: IDiscountCard) => {
-
-
     return (
         <div className={cx([styles.discountCard])}>
             <div className={styles.overlay} />
@@ -22,8 +20,7 @@ const DiscountCard = ({ image, name, description, placeholder }: IDiscountCard) 
                 <span className={styles.subtitle}>{description}</span>
                 <button className={styles.openPopUp_btn} >Подробнее</button>
             </div>
-
-        </div >
+        </div>
     )
 }
 export default DiscountCard

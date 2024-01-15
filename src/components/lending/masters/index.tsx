@@ -8,7 +8,6 @@ import 'swiper/scss/effect-coverflow'
 import 'swiper/scss/pagination'
 import 'swiper/scss/navigation'
 import { EffectCoverflow, Pagination } from 'swiper/modules';
-import { useState } from 'react'
 import cnBind from 'classnames/bind'
 import Link from 'next/link'
 
@@ -17,7 +16,6 @@ interface IMastersProps {
     mastersList: IMaster[]
 }
 const MastersPreview = ({ mastersList }: IMastersProps) => {
-
     return (
         <div className={styles.mastersPreview}>
             <div className={styles.header}>
@@ -56,7 +54,6 @@ const MastersPreview = ({ mastersList }: IMastersProps) => {
                                 Посмотреть профиль
                             </Link>
                         </SwiperSlide>
-
                     )}
                 </Swiper>
             </div>

@@ -44,7 +44,7 @@ const DiscountPreview = ({ discountsList }: IDiscountProps) => {
                         <div
                             className={styles.discountCard}>
                             <div className={styles.overlay} />
-                            <Image priority={true} quality={60} src={discount.img} height={1000} width={1200} alt={discount.name} className={styles.discountImg}
+                            <Image priority={true} quality={60} src={discount.img} height={400} width={1000} alt={discount.name} className={styles.discountImg}
                             />
                             <div className={styles.description}>
                                 <span className={styles.title}>{discount.name}</span>

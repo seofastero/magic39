@@ -43,15 +43,11 @@ const ProgramsPreview = ({ programsList }: IProgramsProps) => {
                         modules={[Navigation]}
                         className={styles.mySwiper}
                         ref={swiperRef}
-                        pagination={true}
-
-                    >
+                        pagination={true}>
                         <div className={'btnNext'}>{'>'}</div>
-
                         <div className={'btnPrev'}>{'<'}</div>
                         {programsList.map((program, index) =>
                             <SwiperSlide key={index} className={cx(['program'])}>
-
                                 <div className={styles.overlay} />
                                 <Image quality={50} priority={true} src={program.img} height={1000} width={1000} alt={program.name} className={styles.currentImg} />
                                 <div className={styles.description}>
@@ -75,14 +71,9 @@ const ProgramsPreview = ({ programsList }: IProgramsProps) => {
                                         </ul>
                                     </div>
                                 </div>
-
                             </SwiperSlide>
-
                         )}
-
-
                     </Swiper>
-
                 </div>
                 <div className={styles.right}>
                     <div className={styles.altPrograms}>
@@ -95,7 +86,6 @@ const ProgramsPreview = ({ programsList }: IProgramsProps) => {
                         )}
                     </div>
                 </div>
-
             </div>
             <div className={styles.linkWrap}>
                 <Link href={'/programs'} className={styles.link}>Посмотреть все ({programsList.length})</Link>
