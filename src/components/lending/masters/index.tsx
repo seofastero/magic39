@@ -61,7 +61,7 @@ const MastersPreview = ({ mastersList }: IMastersProps) => {
                 </Swiper>
             </div>
             <div className={styles.linkWrap}>
-                <Link href={'/programs'} className={styles.link}>Посмотреть все </Link>
+                <Link href={'/programs'} className={styles.link}>Посмотреть все ({mastersList.length})</Link>
             </div>
         </div >
     )

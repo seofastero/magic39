@@ -13,7 +13,7 @@ const InteriorPreview = () => {
 
             </div>
             <div className={styles.interior}>
-                <Image src={'/interrior/1.jpg'} quality={70} height={1300} width={1000} alt={'Интерьер'} className={styles.bgImg} />
+                <Image src={'/interrior/1.jpg'} quality={80} height={1300} width={1000} alt={'Интерьер'} className={styles.bgImg} />
                 <Link href={'/interior'} className={styles.linkBtn}>Посмотреть интерьер</Link>
                 <div className={styles.overlay} />
             </div>
