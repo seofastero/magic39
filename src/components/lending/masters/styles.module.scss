@@ -1,0 +1,253 @@
+@import './src/shared/mediaQueries/media.scss';
+
+.mastersPreview {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: black;
+    padding-top: 20px;
+    position: relative;
+    width: 100vw;
+    color: white;
+    max-width: 1280px;
+
+
+
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        padding: 10px;
+        margin-bottom: 10px;
+
+        .title {
+            font-size: 48px;
+
+            @include for-mobile-xs {
+                font-size: 24px;
+
+            }
+
+            @include for-mobile {
+                font-size: 32px;
+
+            }
+
+            @include for-tablet-plus {
+                font-size: 36px;
+            }
+
+            @include for-desktop-l {
+                font-size: 38px;
+
+            }
+        }
+
+        .divider {
+            height: 3px;
+            width: 150px;
+            background-color: #e1ba7b;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.84);
+
+            @include for-mobile-xs {
+                font-size: 14px;
+
+            }
+
+            @include for-mobile {
+                font-size: 16px;
+
+            }
+
+            @include for-tablet-plus {
+                font-size: 18px;
+
+            }
+
+            @include for-desktop-l {
+                font-size: 19px;
+
+            }
+        }
+    }
+
+    .mastersList {
+        display: flex;
+
+        position: relative;
+        height: 520px;
+
+        .swiper {
+            width: 100vw;
+            height: 550px;
+            --swiper-pagination-color: #daaf66;
+            --swiper-pagination-bullet-inactive-color: white;
+            --swiper-pagination-bullet-inactive-opacity: 0.3;
+
+            @include for-mobile {
+                height: 480px;
+            }
+        }
+
+        .swiperSlide {
+            text-align: center;
+            font-size: 18px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-width: 290px;
+            max-width: 400px;
+        }
+
+        .masterCard {
+            height: 90%;
+            background-color: red;
+            border-radius: 12px;
+            position: relative;
+            width: 100%;
+            min-width: 200px;
+
+
+            .masterImg {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+                border-radius: inherit;
+            }
+
+            .masterName {
+                display: none;
+                position: absolute;
+                top: 20px;
+                left: 0px;
+                color: white;
+                font-size: 19px;
+                padding: 10px;
+                background-color: rgba(0, 0, 0, 0.279);
+                border-radius: 6px;
+
+                animation: appearance 0.5s ease-in;
+
+                @include for-mobile-xs {
+                    font-size: 17px;
+                    padding: 6px;
+                    background-color: rgba(0, 0, 0, 0.377);
+                }
+
+                @include for-mobile {
+                    font-size: 17px;
+                    padding: 6px;
+                    background-color: rgba(0, 0, 0, 0.538);
+
+                }
+            }
+
+
+            .masterInfo {
+                display: none;
+                align-items: center;
+                justify-content: center;
+                position: absolute;
+                height: 50px;
+                width: 100%;
+                background-color: rgba(23, 27, 27, 0.501);
+                bottom: 0px;
+                left: 0;
+                color: white;
+                font-size: 19px;
+                animation: appearance 0.5s ease-in;
+
+                @include for-mobile-xs {
+                    font-size: 13px;
+                    background-color: rgba(0, 0, 0, 0.738);
+                }
+
+                @include for-mobile {
+                    font-size: 14px;
+                    background-color: rgba(0, 0, 0, 0.738);
+
+                }
+            }
+
+            &:hover {
+                .masterName {
+                    display: block;
+
+                }
+
+                .masterInfo {
+                    display: flex;
+                }
+            }
+
+            &:focus {
+                .masterName {
+                    display: block;
+
+                }
+
+                .masterInfo {
+                    display: flex;
+                }
+            }
+
+            &:active {
+                .masterName {
+                    display: block;
+
+                }
+
+                .masterInfo {
+                    display: flex;
+                }
+            }
+        }
+
+
+
+
+
+
+    }
+
+
+
+
+
+    .linkWrap {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        height: 80px;
+        width: 100%;
+        bottom: 0;
+
+        .link {
+            padding: 10px 10px;
+            border: 1px solid rgb(147, 142, 131);
+
+            font-weight: 600;
+            color: white;
+        }
+
+    }
+
+}
+
+@keyframes appearance {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

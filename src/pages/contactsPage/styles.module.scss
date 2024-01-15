@@ -1,0 +1,132 @@
+@import './src/shared/mediaQueries/media.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+    background-color: black;
+    min-width: 340px;
+
+    .main {
+        height: calc(100% - 100px);
+        width: 100%;
+        max-width: 900px;
+
+        .contacts_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            min-height: 100%;
+            margin-bottom: 100px;
+            animation: 1s appearing ease-in-out;
+
+            .header {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.827);
+                padding: 10px 20px;
+
+                @include for-mobile {
+                    padding: 10px;
+
+                }
+
+                .title {
+                    font-size: 36px;
+                    color: goldenrod;
+                }
+
+                .subtitle {
+                    font-size: 18px;
+                    color: grey;
+                }
+            }
+
+            .body_wrapper {
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 10px 20px;
+
+                @include for-mobile {
+                    padding: 10px;
+                }
+            }
+
+            .contacts_box {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                color: white;
+                gap: 15px;
+                border-radius: 6px;
+
+                .confirm_btn {
+                    display: flex;
+                    align-items: center;
+                    gap: 10px;
+                    padding: 15px;
+                    border-radius: 6px;
+                    font-size: 18px;
+                    width: 100%;
+                    background-color: #272338;
+                    color: rgb(255, 255, 255);
+
+                    &:hover {
+                        background-color: #272338d5;
+
+                    }
+                }
+
+                .social_icon {
+                    height: 30px;
+                    width: 30px;
+                }
+
+
+            }
+
+            .map_box {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 100%;
+                color: white;
+                gap: 15px;
+                background-color: rgba(255, 221, 0, 0.11);
+                border-radius: 6px;
+                height: 350px;
+                overflow: hidden;
+            }
+
+        }
+
+    }
+}
+
+@keyframes saturation {
+    0% {
+        filter: saturate(95%);
+
+    }
+
+    100% {
+        filter: saturate(130%);
+
+    }
+}
+
+@keyframes appearing {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

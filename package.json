@@ -1,0 +1,34 @@
+{
+  "name": "magicspa",
+  "version": "0.1.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@pbe/react-yandex-maps": "^1.2.5",
+    "classnames": "^2.3.2",
+    "clipboard-copy": "^4.0.1",
+    "gsap": "^3.12.4",
+    "js-cookie": "^3.0.5",
+    "next": "14.0.3",
+    "path": "^0.12.7",
+    "react": "^18",
+    "react-dom": "^18",
+    "sass": "^1.69.5",
+    "sharp": "^0.33.1",
+    "swiper": "^11.0.5"
+  },
+  "devDependencies": {
+    "@types/js-cookie": "^3.0.6",
+    "@types/node": "^20",
+    "@types/react": "^18",
+    "@types/react-dom": "^18",
+    "eslint": "^8",
+    "eslint-config-next": "14.0.3",
+    "typescript": "^5"
+  }
+}

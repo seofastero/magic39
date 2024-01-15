@@ -1,0 +1,101 @@
+@import './src/shared/mediaQueries/media.scss';
+
+.discountCard {
+    display: flex;
+    width: 100%;
+    height: 250px;
+    position: relative;
+    transition: 0.5s transform ease-in-out 100ms;
+    border-radius: 6px;
+    animation: 0.5s appearing ease-in;
+    min-width: 330px;
+
+    @include for-tablet-plus {
+        &:hover {
+            transform: scale(1.01);
+        }
+    }
+
+    &:hover {
+        .overlay {
+            opacity: 0.1;
+        }
+
+        .discountImg {
+            filter: saturate(110%);
+        }
+
+    }
+
+
+
+    .overlay {
+        height: 100%;
+        width: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        object-fit: cover;
+        z-index: 2;
+        border-radius: inherit;
+        background-color: rgb(0, 0, 0);
+        opacity: 0.3;
+        transition: 0.5s all ease-in-out 100ms;
+
+    }
+
+    .discountImg {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+        border-radius: inherit;
+        transition: 0.5s all ease-in-out 100ms;
+
+    }
+
+    .description {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        height: 100%;
+        gap: 20px;
+        position: absolute;
+        left: 20px;
+        top: 0;
+        color: white;
+        z-index: 3;
+
+        .title {
+            font-size: 21px;
+            font-weight: 600;
+            color: goldenrod;
+        }
+
+        .subtitle {
+            color: rgba(255, 255, 255, 0.689);
+        }
+
+        .openPopUp_btn {
+            background-color: rgba(1, 0, 0, 0.816);
+            color: rgba(255, 255, 255, 0.825);
+            padding: 10px;
+            border-radius: 6px;
+            width: 200px;
+        }
+    }
+
+}
+
+.card_appearing {
+    display: none;
+}
+
+@keyframes appearing {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

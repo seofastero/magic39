@@ -1,0 +1,199 @@
+@import './src/shared/mediaQueries/media.scss';
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: fixed;
+    padding: 0 20px;
+    height: 130px;
+    width: 100vw;
+    background-color: rgba(0, 0, 0, 0.77);
+    top: 0px;
+    z-index: 10000;
+    min-width: 340px;
+
+    @include for-mobile-xs {
+        padding: 0 10px;
+        height: 100px;
+    }
+
+    @include for-mobile {
+        padding: 0 10px;
+        height: 110px;
+
+    }
+
+    @include for-desktop-l {
+        height: 140px;
+    }
+
+    .left {
+        display: flex;
+        align-items: center;
+        gap: 20px;
+        width: 30%;
+        height: 50px;
+
+        .dropdown_btn {
+            color: white;
+            height: 50px;
+            width: 50px;
+
+            @include for-mobile-xs {
+                height: 40px;
+                width: 40px;
+
+            }
+
+            @include for-mobile {
+                height: 40px;
+                width: 40px;
+
+            }
+
+            @include for-desktop-l {
+                height: 60px;
+                width: 60px;
+
+            }
+
+            .dropdown_icon {
+                height: 100%;
+            }
+        }
+
+        .address {
+            display: none;
+            align-items: center;
+            height: 40px;
+            gap: 20px;
+
+            @include for-tablet-l-plus {
+                display: flex;
+            }
+
+            @include for-desktop-l {
+                height: 40px;
+            }
+
+            .address_icon {
+                color: #daaf66;
+                height: 100%;
+
+            }
+
+            .address_text {
+                color: white;
+                font-size: 19px;
+
+                @include for-desktop-l {
+                    font-size: 21px;
+                }
+            }
+        }
+    }
+
+    .center {
+        .logo {
+            height: 90px;
+            width: 90px;
+
+            @include for-mobile-xs {
+                height: 70px;
+                width: 70px;
+            }
+
+            @include for-mobile {
+                height: 80px;
+                width: 80px;
+            }
+
+            @include for-desktop-l {
+                height: 110px;
+                width: 110px;
+            }
+        }
+    }
+
+    .right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        width: 30%;
+        color: white;
+        gap: 5px;
+        cursor: pointer;
+
+        .contact_icon {
+            height: 45px;
+            color: #daaf66;
+            width: 40px;
+
+            @include for-mobile-xs {
+                height: 40px;
+            }
+
+            @include for-mobile {
+                height: 40px;
+            }
+
+            @include for-mobile-plus {
+                display: block;
+            }
+
+            @include for-tablet-l-plus {
+                display: none;
+            }
+        }
+
+        .number {
+            display: none;
+            color: white;
+            font-size: 28px;
+            color: #daaf66;
+
+            @include for-tablet-l-plus {
+                display: block;
+            }
+
+            @include for-desktop-l {
+                font-size: 30px;
+
+            }
+        }
+
+        .order {
+            display: none;
+            color: white;
+            font-size: 18px;
+            color: #daaf66;
+            border-bottom: 1px solid #daaf66;
+
+
+            @include for-tablet-l-plus {
+                display: block;
+            }
+
+            @include for-desktop-l {
+                font-size: 21px;
+
+            }
+        }
+    }
+}
+
+.fixed {
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.sticky {
+    position: sticky;
+}
+
+.static {
+    position: static;
+}

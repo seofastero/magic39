@@ -1,0 +1,120 @@
+@import './src/shared/mediaQueries/media.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+    background-color: black;
+    min-width: 340px;
+
+    .main {
+        width: 100%;
+        max-width: 900px;
+        min-height: 600px;
+
+        .rooms_wrapper {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 100px;
+            animation: 1s appearing ease-in-out;
+            padding: 10px 20px;
+
+            @include for-mobile {
+                padding: 10px;
+
+            }
+
+            .header {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.827);
+
+
+                .title {
+                    font-size: 36px;
+                    color: goldenrod;
+                }
+
+                .subtitle {
+                    font-size: 18px;
+                    color: grey;
+                }
+            }
+
+
+            .activeThumb {
+                opacity: 1 !important;
+            }
+
+            .swiper {
+                height: 120px;
+                box-sizing: border-box;
+                padding: 10px 0;
+
+                .altImage {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+                .slider {
+                    width: 25%;
+                    height: 100%;
+                    opacity: 0.4;
+
+                }
+
+            }
+
+            .swiper2 {
+                height: 500px;
+                width: 100%;
+
+                .mainImage {
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+
+                .slider2 {
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+
+            .empty {
+                color: white;
+                height: 600px;
+                width: 100%;
+            }
+        }
+
+    }
+}
+
+@keyframes saturation {
+    0% {
+        filter: saturate(95%);
+
+    }
+
+    100% {
+        filter: saturate(130%);
+
+    }
+}
+
+@keyframes appearing {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

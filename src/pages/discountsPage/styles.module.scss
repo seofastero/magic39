@@ -1,0 +1,94 @@
+@import './src/shared/mediaQueries/media.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+    background-color: black;
+    min-width: 340px;
+
+    .main {
+        min-height: calc(100% - 100px);
+        width: 100%;
+        max-width: 900px;
+
+        .discountsWrapper {
+            min-height: 100%;
+            margin-bottom: 100px;
+
+            .header {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.827);
+                padding: 10px 20px;
+
+                @include for-mobile-xs {
+                    padding: 1px;
+
+                }
+
+                @include for-mobile {
+                    padding: 10px;
+
+                }
+
+                .title {
+                    font-size: 36px;
+                    color: goldenrod;
+                }
+
+                .subtitle {
+                    font-size: 18px;
+                    color: grey;
+                }
+            }
+
+            .discountsList {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                color: white;
+                padding: 20px;
+                gap: 15px;
+
+                @include for-mobile-xs {
+                    padding: 1px;
+
+                }
+
+                @include for-mobile {
+                    padding: 10px;
+
+                }
+            }
+
+        }
+
+    }
+}
+
+@keyframes saturation {
+    0% {
+        filter: saturate(95%);
+
+    }
+
+    100% {
+        filter: saturate(130%);
+
+    }
+}
+
+@keyframes appearing {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

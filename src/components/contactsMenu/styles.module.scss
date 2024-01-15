@@ -1,0 +1,180 @@
+@import './src/shared/mediaQueries/media.scss';
+
+.contactsPopUp {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 10000;
+    color: white;
+    min-width: 340px;
+
+    .formShadow {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        z-index: 10000;
+        background-color: #daaf660f;
+
+        @include for-mobile-xs {
+            height: 300vh;
+        }
+    }
+
+    .formBox {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 10001;
+        gap: 30px;
+        background-color: rgba(0, 0, 0, 0.885);
+        border-radius: 12px;
+        width: 90vw;
+        max-width: 500px;
+        padding: 20px;
+        position: relative;
+        animation: 0.3s appearing ease-in;
+        min-width: 340px;
+
+        @include for-mobile-xs {
+            width: 98vw;
+            gap: 10px;
+        }
+
+        @include for-mobile {
+            width: 95vw;
+            gap: 15px;
+
+        }
+
+        .title {
+            font-size: 17px;
+            color: red;
+            font-weight: 600;
+        }
+
+        .subtitle {
+            font-size: 20px;
+        }
+
+        .closeBtn {
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            width: 80px;
+            padding: 15px;
+            position: absolute;
+            right: 5px;
+            top: 5px;
+            color: rgba(255, 255, 255, 0.676);
+            cursor: pointer;
+            font-size: 19px;
+            transition: 1s all ease-in;
+
+            &:hover {
+                transform: scale(1.1);
+            }
+        }
+
+
+
+        .buttons {
+            display: flex;
+            flex-direction: column;
+            width: 100%;
+            gap: 10px;
+
+            .socialIcon {
+                height: 30px;
+                width: 30px;
+            }
+
+        }
+
+        .additionalInfo {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 10px;
+            padding-top: 20px;
+            padding-left: 5px;
+            width: 100%;
+
+            .socialDescription {
+                font-size: 15px;
+                color: rgb(156, 156, 156);
+            }
+        }
+
+        .confirmBtn {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 15px;
+            border-radius: 6px;
+            font-size: 18px;
+            width: 100%;
+            background-color: #272338;
+            color: rgb(255, 255, 255);
+
+            @include for-mobile-xs {
+                padding: 10px;
+                font-size: 14px;
+            }
+
+            @include for-mobile {
+                padding: 10px;
+                font-size: 16px;
+            }
+
+            &:hover {
+                background-color: #272338d5;
+
+            }
+        }
+
+        .addWarningText {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            width: 100%;
+            padding: 10px;
+            gap: 5px;
+
+            .circle {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 40px;
+                width: 40px;
+                border-radius: 50%;
+                background-color: white;
+                color: black;
+            }
+
+            .offert {
+                font-size: 13px;
+                width: calc(100% - 40px);
+                color: rgba(255, 255, 255, 0.369);
+            }
+        }
+    }
+}
+
+@keyframes appearing {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

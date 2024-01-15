@@ -1,0 +1,97 @@
+@import './src/shared/mediaQueries/media.scss';
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+    width: 100vw;
+    background-color: black;
+    min-width: 340px;
+
+    .main {
+        width: 100%;
+        max-width: 1300px;
+        min-height: 500px;
+
+        .mastersWrapper {
+            min-height: 100%;
+            margin-bottom: 100px;
+            animation: 1s appearing ease-in;
+
+            .header {
+                display: flex;
+                justify-content: center;
+                flex-direction: column;
+                width: 100%;
+                background-color: rgba(0, 0, 0, 0.827);
+                padding: 10px 20px;
+
+                @include for-mobile {
+                    padding: 10px;
+
+                }
+
+                .title {
+                    font-size: 36px;
+                    color: goldenrod;
+                }
+
+                .subtitle {
+                    font-size: 18px;
+                    color: grey;
+                }
+            }
+
+            .mastersList {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                width: 100%;
+                min-height: 50vh;
+                gap: 10px;
+                padding: 20px;
+
+                @include for-mobile-xs {
+                    grid-template-columns: repeat(1, 1fr);
+                    padding: 10px;
+                }
+
+                @include for-mobile {
+                    grid-template-columns: repeat(2, 1fr);
+                    padding: 10px;
+
+                }
+
+                @include for-tablet {
+                    grid-template-columns: repeat(3, 1fr);
+                    padding: 10px;
+                }
+
+            }
+
+        }
+
+    }
+}
+
+@keyframes saturation {
+    0% {
+        filter: saturate(95%);
+
+    }
+
+    100% {
+        filter: saturate(130%);
+
+    }
+}
+
+@keyframes appearing {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}

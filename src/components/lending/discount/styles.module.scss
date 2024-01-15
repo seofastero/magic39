@@ -1,0 +1,222 @@
+@import './src/shared/mediaQueries/media.scss';
+
+.discountPreview {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    height: 500px;
+    width: 100vw;
+    background-color: black;
+    max-width: 1280px;
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: white;
+        padding: 10px;
+
+        .title {
+            font-size: 48px;
+
+            @include for-mobile-xs {
+                font-size: 24px;
+
+            }
+
+            @include for-mobile {
+                font-size: 32px;
+
+            }
+
+            @include for-tablet-plus {
+                font-size: 36px;
+            }
+
+            @include for-desktop-l {
+                font-size: 38px;
+
+            }
+        }
+
+        .divider {
+            height: 3px;
+            width: 150px;
+            background-color: #e1ba7b;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.84);
+
+            @include for-mobile-xs {
+                font-size: 14px;
+
+            }
+
+            @include for-mobile {
+                font-size: 16px;
+
+            }
+
+            @include for-tablet-plus {
+                font-size: 18px;
+
+            }
+
+            @include for-desktop-l {
+                font-size: 19px;
+
+            }
+        }
+    }
+
+
+    .discountCard {
+        display: flex;
+        width: 100%;
+        height: 300px;
+        position: relative;
+
+        @include for-mobile {
+            height: 300px;
+
+        }
+
+        &:hover {
+            .overlay {
+                opacity: 0.2;
+            }
+        }
+
+        .overlay {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            object-fit: cover;
+            z-index: 3;
+            border-radius: inherit;
+            background-color: rgba(0, 0, 0, 0.278);
+            transition: 0.5s opacity ease-in;
+        }
+
+        .discountImg {
+            height: 100%;
+            width: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            z-index: 1;
+            border-radius: inherit;
+            object-fit: cover;
+
+        }
+
+        .description {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: flex-start;
+            height: 100%;
+            gap: 5px;
+            position: absolute;
+            left: 20px;
+            top: 0;
+            color: white;
+            z-index: 3;
+
+            @include for-mobile-xs {
+                left: 0;
+                padding: 20px;
+            }
+
+            @include for-mobile {
+                left: 0;
+                padding: 20px;
+
+            }
+
+            .title {
+                font-size: 30px;
+                font-weight: 600;
+                color: goldenrod;
+                width: 100%;
+                text-align: left;
+
+
+                @include for-mobile-xs {
+                    font-size: 24px;
+                    text-align: center;
+                }
+
+                @include for-mobile {
+                    font-size: 28px;
+                    text-align: center;
+
+                }
+
+                @include for-tablet-plus {
+                    font-size: 36px;
+                }
+
+                @include for-desktop-l {
+                    font-size: 38px;
+
+                }
+            }
+
+            .subtitle {
+                color: rgb(210, 210, 210);
+                font-size: 18px;
+                text-align: left;
+
+                @include for-mobile-xs {
+                    font-size: 22px;
+                    text-align: center;
+
+                }
+
+                @include for-mobile {
+                    font-size: 22px;
+                    text-align: center;
+
+                }
+
+                @include for-tablet-plus {
+                    font-size: 22px;
+                }
+
+                @include for-desktop-l {
+                    font-size: 24px;
+
+                }
+
+            }
+
+
+        }
+
+    }
+
+}
+
+.swiper {
+    width: 100%;
+    height: 100%;
+    --swiper-pagination-color: #daaf66;
+    --swiper-pagination-bullet-inactive-color: white;
+    --swiper-pagination-bullet-inactive-opacity: 0.3;
+}
+
+.swiperSlide {
+    text-align: center;
+    font-size: 18px;
+    background: #000000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}

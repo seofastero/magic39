@@ -1,0 +1,132 @@
+@import './src/shared/mediaQueries/media.scss';
+
+.interiorPreview {
+    height: 450px;
+    width: 100vw;
+    background-size: cover;
+    position: relative;
+    box-shadow: var(--box-shadow-inner);
+    background-position: 200px 0px;
+    object-fit: contain;
+    min-width: 340px;
+    max-width: 1280px;
+
+    .header {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+        color: white;
+        padding: 10px;
+        margin-bottom: 10px;
+
+        .title {
+            font-size: 48px;
+
+            @include for-mobile-xs {
+                font-size: 24px;
+
+            }
+
+            @include for-mobile {
+                font-size: 32px;
+
+            }
+
+            @include for-tablet-plus {
+                font-size: 36px;
+            }
+
+            @include for-desktop-l {
+                font-size: 38px;
+
+            }
+        }
+
+        .divider {
+            height: 3px;
+            width: 150px;
+            background-color: #e1ba7b;
+        }
+
+        .subtitle {
+            text-align: center;
+            color: rgba(255, 255, 255, 0.84);
+
+            @include for-mobile-xs {
+                font-size: 14px;
+
+            }
+
+            @include for-mobile {
+                font-size: 16px;
+
+            }
+
+            @include for-tablet-plus {
+                font-size: 18px;
+
+            }
+
+            @include for-desktop-l {
+                font-size: 19px;
+
+            }
+        }
+    }
+
+
+    .interior {
+        height: 240px;
+        position: relative;
+
+        &:hover {
+            filter: blur(0) saturate(140%);
+
+            .overlay {
+                opacity: 0;
+            }
+
+        }
+
+        .bgImg {
+            height: 100%;
+            width: 100%;
+            object-fit: cover;
+            object-position: center;
+            filter: saturate(130%);
+        }
+
+        .overlay {
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            height: 100%;
+            width: 100%;
+            z-index: 1;
+            background-color: black;
+            opacity: 0.2;
+            transition: 0.5s opacity ease-in;
+        }
+
+        .linkBtn {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: absolute;
+            top: 0;
+            left: 0;
+            bottom: 0;
+            right: 0;
+            margin: auto auto;
+            z-index: 2;
+            color: white;
+            border: 1px solid white;
+            height: 50px;
+            padding: 10px;
+            width: fit-content;
+            font-size: 19px;
+        }
+    }
+}
